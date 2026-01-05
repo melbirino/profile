@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'PS2P-Regular';
+    src: url(fonts/PressStart2P-Regular.ttf) format('truetype');
+}
+
 body {
     background-color: #000;
     display: flex;
@@ -48,9 +53,10 @@ body {
 
 .title {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
-    color: #333;
+    color: #000;
+    font-family: 'PS2P-Regular';
 }
 
 .sn {
