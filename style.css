@@ -16,7 +16,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'PS2P-Regular', Arial, sans-serif;
 }
 
 .panel {
@@ -53,16 +53,31 @@ body {
 
 .title {
     margin: 0;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: normal;
     color: #000;
-    font-family: 'PS2P-Regular';
+    font-family: 'PS2P-Regular', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.verified-account {
+    height: 18px;
+    width: 18px;
+    flex-shrink: 0;
 }
 
 .sn {
     display: flex;
     gap: 20px;
     margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .cart {
@@ -75,7 +90,6 @@ body {
 .cart:hover {
     transform: scale(1.1);
 }
-
 
 @media (max-width: 768px) {
     .panel {
@@ -95,12 +109,15 @@ body {
     }
 
     .title {
-        font-size: 16px;
+        font-size: 12px;
+    }
+
+    .verified-account {
+        height: 14px;
+        width: 14px;
     }
 
     .sn {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 15px;
     }
 
