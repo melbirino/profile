@@ -6,7 +6,8 @@
 
 @font-face {
     font-family: 'PS2P-Regular';
-    src: url(fonts/PressStart2P-Regular.ttf) format('truetype');
+    src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+    font-display: swap; /* улучшает отрисовку при загрузке шрифта */
 }
 
 body {
@@ -15,16 +16,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
     font-family: 'PS2P-Regular', Arial, sans-serif;
 }
 
 .panel {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    margin: 10px;
     width: 600px;
     height: 300px;
     background-color: #fff;
@@ -37,10 +35,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     gap: 15px;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .avatar {
@@ -52,7 +49,6 @@ body {
 }
 
 .title {
-    margin: 0;
     font-size: 16px;
     font-weight: normal;
     color: #000;
@@ -75,9 +71,9 @@ body {
 .sn {
     display: flex;
     gap: 20px;
-    margin: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 10px 0;
 }
 
 .cart {
@@ -91,6 +87,7 @@ body {
     transform: scale(1.1);
 }
 
+/* Адаптивность */
 @media (max-width: 768px) {
     .panel {
         width: 90%;
