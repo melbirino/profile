@@ -7,7 +7,14 @@
 @font-face {
     font-family: 'PS2P-Regular';
     src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
-    font-display: swap; /* улучшает отрисовку при загрузке шрифта */
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -15,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     font-family: 'PS2P-Regular', Arial, sans-serif;
 }
 
@@ -23,8 +30,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 600px;
-    height: 300px;
+    width: 90%;
+    max-width: 600px;
     background-color: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -87,12 +94,10 @@ body {
     transform: scale(1.1);
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .panel {
         width: 90%;
         padding: 15px;
-        height: auto;
     }
 
     .info {
