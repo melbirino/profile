@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'PS2P-Regular';
+    src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #000;
+    font-family: 'PS2P-Regular', Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    width: 100%;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    font-family: 'PS2P-Regular', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.verified-account {
+    height: 18px;
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.sn {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.cart {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .panel {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .info {
+        margin: 15px 0;
+        gap: 10px;
+    }
+
+    .avatar {
+        height: 80px;
+        width: 80px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .verified-account {
+        height: 14px;
+        width: 14px;
+    }
+
+    .sn {
+        gap: 15px;
+    }
+
+    .cart {
+        height: 35px;
+        width: 35px;
+    }
+}
