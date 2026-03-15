@@ -32,11 +32,11 @@ main {
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 600px;
+    max-width: 900px;
     background-color: #fff;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
 }
 
 .info {
@@ -78,17 +78,26 @@ main {
 
 .sn {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 12px;
+    flex-wrap: nowrap;
     justify-content: center;
     margin: 10px 0;
+    overflow-x: auto;
+    padding: 5px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sn::-webkit-scrollbar {
+    display: none;
 }
 
 .cart {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     transition: transform 0.2s ease;
+    flex-shrink: 0;
 }
 
 .cart:hover {
@@ -97,8 +106,9 @@ main {
 
 @media (max-width: 768px) {
     .panel {
-        width: 90%;
+        width: 95%;
         padding: 15px;
+        max-width: 100%;
     }
 
     .info {
@@ -121,11 +131,25 @@ main {
     }
 
     .sn {
-        gap: 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
     }
 
     .cart {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart {
         height: 35px;
         width: 35px;
+    }
+
+    .sn {
+        gap: 8px;
     }
 }
