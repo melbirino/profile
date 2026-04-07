@@ -12,8 +12,6 @@
 
 html,
 body {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
     background-color: #000;
     font-family: 'PS2P-Regular', Arial, sans-serif;
@@ -60,7 +58,6 @@ main {
     font-size: 16px;
     font-weight: normal;
     color: #000;
-    font-family: 'PS2P-Regular', Arial, sans-serif;
     display: flex;
     align-items: center;
     gap: 6px;
