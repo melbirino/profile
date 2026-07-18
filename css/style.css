@@ -35,10 +35,13 @@ main {
 .glasses-container {
     width: 100%;
     line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .glasses {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     border-radius: 20px 20px 0 0;
